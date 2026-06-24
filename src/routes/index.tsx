@@ -73,51 +73,51 @@ function Index() {
     ["संपर्क", "#contact"],
   ];
   return (
-    <div className="min-h-screen text-ink overflow-x-hidden">
+    <div className="min-h-screen text-ink">
       {/* NAV — sticky + responsive */}
       <header className="sticky top-0 z-50 border-b border-gold/40 bg-parchment/85 backdrop-blur-md shadow-sm shadow-maroon/10">
-        <div className="container mx-auto grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-6 sm:py-4">
+        <div className="container mx-auto grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-4 sm:px-6 sm:py-5">
           <a href="#top" className="flex min-w-0 items-center gap-3">
             <img
               src={LOGO_URL}
               alt="गुरुजी की पाठशाला लोगो"
-              className="h-11 w-11 shrink-0 rounded-full object-contain sm:h-12 sm:w-12"
+              className="h-14 w-14 shrink-0 rounded-full object-contain sm:h-[72px] sm:w-[72px]"
             />
             <div className="min-w-0 leading-tight">
-              <div className="truncate font-display text-base text-maroon sm:text-xl">
+              <div className="truncate font-display text-lg text-maroon sm:text-[28px]">
                 गुरुजी की पाठशाला
               </div>
-              <div className="truncate text-[9px] uppercase tracking-[0.25em] text-gold-deep sm:text-[10px] sm:tracking-[0.3em]">
+              <div className="truncate text-[10px] uppercase tracking-[0.25em] text-gold-deep sm:text-[13px] sm:tracking-[0.3em]">
                 Est. 2022 · Trust No. 5891
               </div>
             </div>
           </a>
-          <nav className="hidden lg:flex gap-6 text-sm text-ink/80">
+          <nav className="hidden lg:flex gap-8 text-base font-semibold text-ink/85">
             {navLinks.map(([l, h]) => (
               <a
                 key={h}
                 href={h}
-                className="border-b border-transparent transition-colors hover:border-gold-deep hover:text-maroon"
+                className="border-b border-transparent transition-colors hover:border-gold-deep hover:text-maroon py-1"
               >
                 {l}
               </a>
             ))}
           </nav>
           <button
-            className="lg:hidden shrink-0 rounded border border-gold-deep/60 px-3 py-2 text-maroon"
+            className="lg:hidden shrink-0 rounded border border-gold-deep/60 px-4 py-2.5 text-maroon"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Menu"
             aria-expanded={menuOpen}
           >
-            <div className="flex flex-col gap-[3px]">
+            <div className="flex flex-col gap-[4px]">
               <span
-                className={`block h-[2px] w-5 bg-maroon transition-transform ${menuOpen ? "translate-y-[5px] rotate-45" : ""}`}
+                className={`block h-[2px] w-6 bg-maroon transition-transform ${menuOpen ? "translate-y-[6px] rotate-45" : ""}`}
               />
               <span
-                className={`block h-[2px] w-5 bg-maroon transition-opacity ${menuOpen ? "opacity-0" : ""}`}
+                className={`block h-[2px] w-6 bg-maroon transition-opacity ${menuOpen ? "opacity-0" : ""}`}
               />
               <span
-                className={`block h-[2px] w-5 bg-maroon transition-transform ${menuOpen ? "-translate-y-[5px] -rotate-45" : ""}`}
+                className={`block h-[2px] w-6 bg-maroon transition-transform ${menuOpen ? "-translate-y-[6px] -rotate-45" : ""}`}
               />
             </div>
           </button>

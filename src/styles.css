@@ -77,11 +77,13 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-serif);
+    overflow-x: hidden;
     background-image:
       radial-gradient(
         circle at 20% 10%,
